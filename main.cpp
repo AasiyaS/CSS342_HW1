@@ -22,7 +22,14 @@ public:
                this->denominator == other.denominator;
     }
 };
-Fraction reduce (Fraction input); // a/b
+Fraction reduce (Fraction input) // a/b
+{
+    if (input.denominator == 0) {
+        return Fraction(1,1);
+    } else {
+        return Fraction(input.numerator, input.denominator);
+    }
+}
 
 
 void test() {
